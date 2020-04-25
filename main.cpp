@@ -5,46 +5,22 @@
 #include <string>
 using namespace std;
 
+void participante();
+
 /**
  * Funcion para tomar un numero aleatorio entre dos valores, min y max.
  * @param min Rango mínimo de entrada
  * @param max Rango máximo de entrada
  * @return Devuelve un número aleatorio entre el rango mínimo de entrada y el de salida
  */
-int numeroAleatorio(int min, int max){
-    return rand() % (max-min+1) + min;
-}
+int numeroAleatorio(int min, int max);
+
 /**
  * 
  * @param rut Pide el rut de un alumno
  * @return Devuelve la matrícula de un alumno, con toda la información sobre él; nem, ranking, psu matematica, psu lenguaje, psu ciencias, psu historia
  */
-string infoAlumno(int rut){
-    //Guarda el rut de un alumno ingresado por parametro
-    string totalInfo = to_string(rut)+";";
-    
-    
-    //Ingresa el NEM del alumno, como numero aleatorio
-    totalInfo += to_string(numeroAleatorio(475,750)) +";";
-    //Ingresa el Ranking del alumno, como numero aleatorio
-    totalInfo += to_string(numeroAleatorio(475,750)) +";";
-    //Ingresa el puntaje en Matematicas del alumno, como numero aleatorio
-    totalInfo += to_string(numeroAleatorio(475,750)) +";";
-    //Ingresa el puntaje en Lenguaje del alumno, como numero aleatorio
-    totalInfo += to_string(numeroAleatorio(475,750)) +";";
-    //Ingresa el puntaje en Ciencias del alumno, como numero aleatorio
-    totalInfo += to_string(numeroAleatorio(475,750)) +";";
-    //Ingresa el puntaje en Historia del alumno, como numero aleatorio
-    totalInfo += to_string(numeroAleatorio(475,750)) +"\n";
-    
-    
-    return totalInfo;
-}
-
-void participante(){
-    cout<< endl << "=== Tarea ===" <<endl;
-    cout<< endl << "Israel Ramirez Cardoso. "<<endl;
-}
+string infoAlumno(int rut);
 
 /**
  * Taller computacional
@@ -74,4 +50,35 @@ int main(int argc, char** argv){
     
     participante();
     return EXIT_SUCCESS;
+}
+
+void participante(){
+    cout<< endl << "=== Tarea ===" <<endl;
+    cout<< endl << "Israel Ramirez Cardoso. "<<endl;
+}
+
+int numeroAleatorio(int min, int max){
+    return rand() % (max-min+1) + min;
+}
+
+string infoAlumno(int rut){
+    //Guarda el rut de un alumno ingresado por parametro
+    string totalInfo = to_string(rut)+";";
+    
+    
+    //Ingresa el NEM del alumno, como numero aleatorio
+    totalInfo += to_string(numeroAleatorio(475,750)) +";";
+    //Ingresa el Ranking del alumno, como numero aleatorio
+    totalInfo += to_string(numeroAleatorio(475,750)) +";";
+    //Ingresa el puntaje en Matematicas del alumno, como numero aleatorio
+    totalInfo += to_string(numeroAleatorio(475,750)) +";";
+    //Ingresa el puntaje en Lenguaje del alumno, como numero aleatorio
+    totalInfo += to_string(numeroAleatorio(475,750)) +";";
+    //Ingresa el puntaje en Ciencias del alumno, como numero aleatorio
+    totalInfo += to_string(numeroAleatorio(475,750)) +";";
+    //Ingresa el puntaje en Historia del alumno, como numero aleatorio
+    totalInfo += to_string(numeroAleatorio(475,750)) +"\n";
+    
+    
+    return totalInfo;
 }
